@@ -7,6 +7,21 @@ pub struct TicketStore {
     tickets: Vec<Ticket>,
 }
 
+impl IntoIterator for TicketStore {
+    type Item = Ticket;
+    type IntoIter = std::vec::IntoIter<Ticket>;
+
+    fn into_iter(self) -> Self::IntoIter {
+        self.tickets.into_iter()
+    }
+}
+
+impl TicketStore {
+    fn in_progress(&self) -> impl Iterator<Item = &Ticket> {
+        self.tickets.iter().filter(|ticket| ticket.status == Status::InProgress)
+    }
+}
+
 #[derive(Clone, Debug, PartialEq)]
 pub struct Ticket {
     pub title: TicketTitle,
