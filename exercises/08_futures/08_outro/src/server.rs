@@ -9,4 +9,3 @@ pub async fn init() -> Result<(TcpListener, Arc<RwLock<TicketStore>>), anyhow::E
     println!("Server running on 127.0.0.1:8080");
     Ok((listener, store))
 }
-
