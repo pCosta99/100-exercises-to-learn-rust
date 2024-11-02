@@ -1,7 +1,8 @@
 use std::convert::TryFrom;
+use serde::{Deserialize, Serialize};
 
-#[derive(Debug, PartialEq, Clone, Eq)]
-pub struct TicketTitle(String);
+#[derive(Debug, PartialEq, Clone, Eq, Serialize, Deserialize)]
+pub struct TicketTitle(pub String);
 
 #[derive(Debug, thiserror::Error)]
 pub enum TicketTitleError {
