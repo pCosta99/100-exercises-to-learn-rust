@@ -1,0 +1,54 @@
+{
+  "name": "NULL MONARCH",
+  "frame_w": 229,
+  "frame_h": 276,
+  "fps": 10,
+  "scale": 2.3,
+  "scene_offset": [
+    316,
+    12
+  ],
+  "visor": [
+    430.5,
+    76.39999999999999
+  ],
+  "core": [
+    430.5,
+    179.89999999999998
+  ],
+  "palette": {
+    "M0": "#0b0918",
+    "M1": "#1d1832",
+    "M2": "#2e2850",
+    "M3": "#4a4378",
+    "M4": "#7d78ad",
+    "MGd": "#8e1663",
+    "MG": "#ff2e97",
+    "CYd": "#167f9c",
+    "CY": "#3df4ff",
+    "W": "#fff2fb"
+  },
+  "animations": {
+    "idle": {
+      "row": 0,
+      "frames": 12,
+      "loop": true
+    },
+    "attack": {
+      "row": 1,
+      "frames": 14,
+      "loop": false
+    },
+    "hit": {
+      "row": 2,
+      "frames": 6,
+      "loop": false
+    },
+    "intro": {
+      "row": 3,
+      "frames": 26,
+      "loop": false
+    }
+  },
+  "notes": "attack frames 8-10 fire the visor beam (drawn by the scene, see boss_fight.py)"
+}
